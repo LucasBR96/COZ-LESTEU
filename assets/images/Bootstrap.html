@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt"><!-- Idioma da página --><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8"> <!-- MASTERS OF UNICODE! -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+	<link href="Bootstrap_files/bootstrap.css" rel="stylesheet">
+	<link href="Bootstrap_files/all.css" rel="stylesheet">
+	<link href="Bootstrap_files/styles.css" rel="stylesheet">
+	<title>Bootstrap</title>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script><link id="shut-up-css" rel="stylesheet" href="Bootstrap_files/shutup.css"></head>
+
+
+<body>
+
+
+	<div class="container-fluid" style="width: 80%;">
+		<!-- cabeçalho -->
+		<div class="text-danger bg-white">
+
+			<!-- logo aqui -->
+			<div class="row d-flex justify-content-center align-items-center">
+				<h2 class="m-0"> Babushka </h2>
+			</div>
+
+			<div class="row d-flex justify-content-center align-items-center">
+				<h5 class="m-0"> Culinária do leste Europeu </h5>
+			</div>
+
+			<!-- opcões -->
+			<div class="row my-1 text-danger d-flex justify-content-center align-items-center">
+				
+				<div class="col-4 d-flex justify-content-center">
+					<a style="color: rgb(218, 41, 28); font-size: 16px" href="http://127.0.0.1:5500/receitas/">
+						Receitas
+					</a>
+				</div>
+
+				<div class="col-4 d-flex justify-content-center">
+					<a style="color: rgb(218, 41, 28); font-size: 16px" href="#">
+						Restaurantes
+					</a>
+				</div>
+				
+				<div class="col-4 d-flex justify-content-center">
+					<a style="color: rgb(218, 41, 28); font-size: 16px" href="#">
+						Tours
+					</a>
+				</div>
+
+			</div>
+			
+			<!-- barra separadora-->
+			<div class="mb-3" style=" padding: 3px ; background-color: rgb(0, 50, 160)"></div>
+		</div>
+
+		<div id="center">
+
+            <div id="receita-head" class="text-center">
+                <div class="row">
+                    <div class="col">
+                        <h2> Tan Apur </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4"> Dificuldade : 2/5 </div>
+                    <div class="col-4"> Tempo : 50 min </div>
+                    <div class="col-4"> Porções : 4 </div>
+                </div>
+                <div class="row">
+                    <!-- a -->
+                </div>
+            </div>
+
+            <div id="receita-igredientes" class="mt-3 col-10 pl-0">
+				<h3 class="my-4"> Igredientes </h3>
+				<ul class="list-group-flush" style="font-size: 18px; padding-left : 0px;">
+					<li class="list-group-item"> 500 gramas de iogurte natural </li>
+					<li class="list-group-item"> Uma xícara de trigo em grão </li>
+					<li class="list-group-item"> Uma xícara de caldo de legumes </li>
+					<li class="list-group-item"> Folhas de Menta ou Hortelã </li>
+					<li class="list-group-item"> Meia cebola picada </li>
+					<li class="list-group-item"> Meio talo de alho poró picado </li>
+					<li class="list-group-item"> Meia xícara de cogumelos frescos, picados </li>
+					<li class="list-group-item"> Uma colher de sopa de farinha de trigo </li>
+				</ul>
+            </div>
+
+            <div id="receita-preparo" class="mt-3 col-10 pl-0">
+				<h3 class="text-center"> Preparo </h3>
+				<ul class="list-group-flush" style="font-size: 18px; padding-left : 0px;">
+					<li class="list-group-item">
+						<h6 class="fa-chevrons-right">Passo 1</h6>
+						<p> <b>&gt;&gt;</b> Na noite anterior, deixe os grãos de molho em agua fria. Cozinhe-os na panela de 
+							pressão, junto a uma xícara de agua, por 20 minutos em fogo médio.
+						</p>
+					</li>
+					<li class="list-group-item">
+						<h6>Passo 2</h6>
+						<p> <b>&gt;&gt;</b> Refogue a cebola, o alho poró e os cogumelos numa panela com um óleo
+							neutro, até dourar, reserve.
+						</p>
+					</li>
+					<li class="list-group-item">
+						<h6>Passo3</h6>
+						<i class="fa-thin fa-chevrons-right">bla bla bla ...</i>
+					</li>
+					<li class="list-group-item">
+						<h6>Passo4</h6>
+						<i class="fa-thin fa-chevrons-right">bla bla bla ...</i>
+					</li>
+					<li class="list-group-item">
+						<h6>Passo5</h6>
+						<i class="fa-thin fa-chevrons-right">bla bla bla ...</i>
+					</li>
+				</ul>
+            </div>
+		</div>
+
+		<!-- Rodapé -->
+		<div class="text-white" style="background-color: rgb( 0, 50, 160)">
+			<footer class="py-3">        
+				<div class="row d-flex align-items-center justify-content-center">
+					<div class="col-4 d-flex justify-content-left">
+						<ul class="nav flex-column">
+							<li class="nav-item mb-2">
+								<a class="nav-link p-0 text-white" href="#">quem somos</a>
+							</li>
+							<li class="nav-item mb-2">
+								<a class="nav-link p-0 text-white" href="#">parceiros</a>
+							</li>
+							<li class="nav-item mb-2">
+								<a class="nav-link p-0 text-white" href="#">contribua</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-6 d-flex justify-content-center">
+						<form>
+							<h5 class="my-0"><strong> Nosso Newsettler</strong></h5>
+							<p>Receba novo conteúdo no seu e-mail</p>
+							<div class="d-flex gap-2">
+								<input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+								<button class="btn btn-white text-white" type="button">Subscribe</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="Bootstrap_files/jquery-3.js"></script>
+	<script src="Bootstrap_files/popper.js"></script>
+	<script src="Bootstrap_files/bootstrap.js"></script>
+	<script src="Bootstrap_files/script.js"></script>
+
+	<script>
+		$( document ).ready( function(){
+
+			$(".card").each( function(){
+				$(".card-header").addClass( "border-bottom-0" );
+				$(".card-footer").addClass( "border-top-0" );
+			})
+		})
+	</script>
+</body></html>
