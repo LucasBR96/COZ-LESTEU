@@ -62,8 +62,15 @@
 					<p> Preparo: 50 min</p>
 				</div>
 			</div>
+
+			<!-- <div class = "d-md-block d-lg-none col-12 text-center mb-4">
+				<img src = "assets/images/Tan_apur.jpg" style = "width: 80% ; height: 80% ;" >
+			</div> -->
+
 			<div class = "row">
-				<div class = "col-3">
+
+				<div id = "igredientes_div" class = "col-md-6 col-lg-3">
+					
 					<h5 class = "mb-3">Igredientes</h5>
 
 					<ul class = "igrd-lst">
@@ -94,46 +101,44 @@
 						
 					</ul>
 				</div>
-				<div class = "col-9">
-					<div class = "row" >
 
-						<div class = "col-6">
+				<div id = "preparo_div" class = "col-md-6 col-lg-4">
 
-							<div id = "preparo-head" class = "mb-3" >
-								<h5 class = "mb-1">Preparo</h5>
-								<p class = "mb-2" style="font-weight: 400 ; font-size: 17px;">
-									Serve 5 Porções
-								</p>
-							</div>
-
-							<ol class = "prep-steps">
-								<li class = "mb-2">
-									Na noite anterior, deixe os grãos de trigo de molho em agua fria por cerca de 8 horas.
-									Depois, cozinhe-os na panela de pressão por cerca de 20 min, a fogo médio.
-								</li>
-								<li class= "mb-2">
-									Bla bla bla ....
-								</li>
-								<li class= "mb-2">
-									Bla bla bla ....
-								</li>
-								<li class= "mb-2">
-									Bla bla bla ....
-								</li>
-								<li class= "mb-2">
-									Bla bla bla ....
-								</li>
-							</ol>
-
-						</div>
-
-						<div class = "col-6 text-center">
-							<img src = "assets/images/Tan_apur.jpg" style = "width: 80% ; height: 80% ;" >
-						</div>
+					<div id = "preparo-head" class = "mb-3" >
+						<h5 class = "mb-1">Preparo</h5>
+						<p class = "mb-2" style="font-weight: 400 ; font-size: 17px;">
+							Serve 5 Porções
+						</p>
 					</div>
+
+					<ol class = "prep-steps">
+						<li class = "mb-2">
+							Na noite anterior, deixe os grãos de trigo de molho em agua fria por cerca de 8 horas.
+							Depois, cozinhe-os na panela de pressão por cerca de 20 min, a fogo médio.
+						</li>
+						<li class= "mb-2">
+							Bla bla bla ....
+						</li>
+						<li class= "mb-2">
+							Bla bla bla ....
+						</li>
+						<li class= "mb-2">
+							Bla bla bla ....
+						</li>
+						<li class= "mb-2">
+							Bla bla bla ....
+						</li>
+					</ol>
+
 				</div>
+
+				<div id = "img_thumb" class = "col-12 col-lg-5 text-center mb-4">
+					<img src = "assets/images/Tan_apur.jpg" style = "width: 80% ; height: 80% ;" >
+				</div>
+
 			</div>
 		</div>
+	
 
 		<!-- Rodapé -->
 		<div class = "text-white" style = "background-color: rgb( 0, 50, 160)">
@@ -179,6 +184,21 @@
 			$(".card").each( function(){
 				$(".card-header").addClass( "border-bottom-0" );
 				$(".card-footer").addClass( "border-top-0" );
+			})
+
+			$( window ).resize( function(){
+
+				let div;
+				let carr = document.getElementById( "img_thumb" );
+				if ( $( this ).width() <= 992  ){
+					div = document.getElementById( "igredientes_div" );
+					$( carr ).insertBefore( div );
+				}else{
+					div = document.getElementById( "preparo_div" );
+					$( carr ).insertAfter( div );
+				}
+
+				console.log( $( this ).width() );
 			})
 		})
 	</script>
